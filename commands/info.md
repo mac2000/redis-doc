@@ -62,7 +62,7 @@ Here is the meaning of all fields in the **clients** section:
 
 *   `connected_clients`: Number of client connections (excluding connections from slaves)
 *   `client_longest_output_list`: longest output list among current client connections
-*   `client_biggest_input_buf`: biggest input buffer among current client connections
+*   `client_biggest_input_buf`: biggest input buffer among current client connections, if bigger than 0 then in means that there is clients with big payloads there and redis is not able to read their querybuf in time, measured in bytes
 *   `blocked_clients`: Number of clients pending on a blocking call (BLPOP, BRPOP, BRPOPLPUSH)
 
 Here is the meaning of all fields in the **memory** section:
